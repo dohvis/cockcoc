@@ -5,3 +5,7 @@ local_settings.py
 db.sqlite3
 media/
 migrations/
+Include/
+Lib/
+Scripts/
+tcl/
