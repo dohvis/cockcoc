@@ -20,6 +20,9 @@ from app.views import (
     BarList,
     CocktailDetail,
     CocktailList,
+    login,
+    register,
+    select_tags,
 )
 
 from django.contrib import admin
@@ -33,4 +36,8 @@ urlpatterns = [
 
     url(r'^cocktails/$', CocktailList.as_view(), name='cocktail_list'),
     url(r'^cocktails/(?P<pk>\d+)$', CocktailDetail.as_view(), name='cocktail_detail'),
+
+    url(r'^login/$', login),
+    url(r'^register/$', register),
+    url(r'^select_tag/$', select_tags),
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)

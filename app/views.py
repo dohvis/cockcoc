@@ -6,6 +6,7 @@ from app.models import (
     Bar,
     Cocktail,
 )
+from django.shortcuts import render
 
 
 class CocktailList(ListView):
@@ -26,3 +27,15 @@ class BarList(ListView):
 class BarDetail(DetailView):
     model = Bar
     template_name = 'bar_detail.html'
+
+
+def login(request):
+    return render(request, template_name='login.html')
+
+
+def register(request):
+    return render(request, template_name='register.html')
+
+
+def select_tags(request):
+    return render(request, template_name='select_tags.html')
