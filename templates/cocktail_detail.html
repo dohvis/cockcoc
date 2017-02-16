@@ -1,1 +1,26 @@
-{{ cocktail.name }}
+{% extends 'base.html' %}
+{% block title %}
+칵테일 이름이 들어갈까?
+{% endblock %}
+{% block content %}
+    <div id="test2" style="margin-top: -28px;">
+        <img class="responsive-img" src="image/sool.jpg">
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <div class="col s12" style="border-bottom: 1px solid darkgray">설명</div>
+                    <div class="col s12" style="font-size: 18px; word-break:break-all; margin-top: 1%;">ABJKDLJGLKJLKSJEGLKJSELKGJKLSEJGLKSEJAJGKLSJGLKSJGS</div>
+                    <div class="col s12" style="margin-top: 3%; border-bottom: 1px solid darkgray">태그</div>
+                    <div class="col s12 tag" style="padding-top: 8px;"><a style="margin-left: 0px;">칵테일</a><a>칵테일</a><a>칵테일</a><a>칵테일</a></div>
+                    <div class="col s12" style="border-bottom: 1px solid darkgray; margin-top: 3%;">재료</div>
+                    <div class="col s12" style="font-size: 18px; word-break:break-all; margin-top: 1%;">ABJKDLJGLKJLKSJEGLKJSELKGJKLSEJGLKSEJAJGKLSJGLKSJGS</div>
+                    <div class="col s12" style="border-bottom: 1px solid darkgray; margin-top: 3%;">비슷한 술 추천</div>
+                    <div class="col s12 tag" style="padding-top: 8px;">
+                        <img class="col s6" src="image/sample.jpg">
+                        <img class="col s6" src="image/sample.jpg">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
