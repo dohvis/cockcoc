@@ -1,44 +1,48 @@
 {% extends 'base.html' %}
 {% block title %}
-칵테일 이름이 들어갈보자?
+    {{ cocktail.name }}
 {% endblock %}
 {% block content %}
-    <div id="test2" style="margin-top: -28px;">
-        <!--술 이미지 넣어주세여-->
-        <img class="responsive-img" src="/static/image/sool.jpg">
+    <div>
+        <img class="responsive-img" src="/media/{{ cocktail.image }}">
         <!--술 이미지 넣어주세여 끝-->
         <div class="container">
             <div class="row">
                 <div class="col s12">
-                    <div class="col s12" style="border-bottom: 1px solid darkgray">설명</div>
-                    <!--설명 넣어주세여-->
-                    <div class="col s12" style="font-size: 18px; word-break:break-all; margin-top: 1%;">ABJKDLJGLKJLKSJEGLKJSELKGJKLSEJGLKSEJAJGKLSJGLKSJGS</div>
-                    <!--설명 넣어주세여 끝-->
-                    
-                    
-                    <div class="col s12" style="margin-top: 3%; border-bottom: 1px solid darkgray">태그</div>
-                    <!--태그 넣어주세여-->
-                    <div class="col s12 tag" style="padding-top: 8px;"><a style="margin-left: 0px;">칵테일</a><a>칵테일</a><a>칵테일</a><a>칵테일</a></div>
-                    <!--태그 넣어주세여 끝-->
-                    
-                    
-                    <div class="col s12" style="border-bottom: 1px solid darkgray; margin-top: 3%;">재료</div>
-                    <!--재료 넣어주세여-->
-                    <div class="col s12" style="font-size: 18px; word-break:break-all; margin-top: 1%;">ABJKDLJGLKJLKSJEGLKJSELKGJKLSEJGLKSEJAJGKLSJGLKSJGS</div>
-                    <!--재료 넣어주세여 끝-->
-                    
-                    
-                    
+                    <h5 class="header">설명</h5>
+                    <hr>
+                    <p> {{ cocktail.description }}</p>
+                    <h5 class="header">태그</h5>
+                    <hr>
+                    {% for tag in cocktail.tags.all %}
+                        <div class="chip">#{{ tag }}</div>
+                    {% endfor %}
 
-                    <div class="col s12" style="border-bottom: 1px solid darkgray; margin-top: 3%;">비슷한 술 추천</div>
-                    <div class="col s12 tag" style="padding-top: 8px;">
-                        <!--추천술 넣어주세여-->
-                        <img class="col s6" src="image/sample.jpg">
-                        <img class="col s6" src="image/sample.jpg">
-                        <!--추천술 넣어주세여 끝-->
+                    <h5 class="header">이건 어때요?</h5>
+                    <hr/>
+                    <div class="slider">
+                        <ul class="slides">
+                            {% for c in cocktail.tags.similar_objects %}
+                                <li>
+                                    <img src="/media/{{ c.image }}"> <!-- random image -->
+                                    <div class="caption center-align">
+                                        <h3>{{ c.name }}</h3>
+                                        <h5 class="light grey-text text-lighten-3">{{ c.description }}</h5>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider();
+        });
+    </script>
 {% endblock %}
