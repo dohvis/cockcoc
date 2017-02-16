@@ -1,3 +1,17 @@
-from django.shortcuts import render
+from django.views.generic import (
+    ListView,
+)
+from app.models import (
+    Bar,
+    Cocktail,
+)
 
-# Create your views here.
+
+class CocktailList(ListView):
+    model = Cocktail
+    template_name = 'cocktail_list.html'
+
+
+class BarList(ListView):
+    model = Bar
+    template_name = 'bar_list.html'

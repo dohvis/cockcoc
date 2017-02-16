@@ -14,8 +14,18 @@ Including another URLconf
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
 from django.conf.urls import url
+from django.conf.urls.static import static
+from app.views import (
+    BarList,
+    CocktailList,
+)
+
 from django.contrib import admin
+from cockcoc.settings import MEDIA_ROOT, MEDIA_URL
+
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-]
+    url(r'^bars/$', BarList.as_view(), name='bar_list'),
+    url(r'^cocktails/$', CocktailList.as_view(), name='cocktail_list'),
+] + static(MEDIA_URL, document_root=MEDIA_ROOT)
