@@ -39,3 +39,7 @@ def register(request):
 
 def select_tags(request):
     return render(request, template_name='select_tags.html')
+
+
+def index(request):
+    return render(request, template_name='index.html')
