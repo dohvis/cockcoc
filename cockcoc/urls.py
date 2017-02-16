@@ -16,7 +16,9 @@ Including another URLconf
 from django.conf.urls import url
 from django.conf.urls.static import static
 from app.views import (
+    BarDetail,
     BarList,
+    CocktailDetail,
     CocktailList,
 )
 
@@ -27,5 +29,8 @@ from cockcoc.settings import MEDIA_ROOT, MEDIA_URL
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^bars/$', BarList.as_view(), name='bar_list'),
+    url(r'^bars/(?P<pk>\d+)$', BarDetail.as_view(), name='bar_detail'),
+
     url(r'^cocktails/$', CocktailList.as_view(), name='cocktail_list'),
+    url(r'^cocktails/(?P<pk>\d+)$', CocktailDetail.as_view(), name='cocktail_detail'),
 ] + static(MEDIA_URL, document_root=MEDIA_ROOT)
