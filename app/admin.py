@@ -1,3 +1,8 @@
 from django.contrib import admin
+from app.models import (
+    Bar,
+    Cocktail,
+)
 
-# Register your models here.
+admin.site.register(Bar)
+admin.site.register(Cocktail)
