@@ -3,4 +3,19 @@
     로그인
 {% endblock %}
 {% block content %}
+<div class="row">
+  <div class="col s12" style="height: 100%;">
+      <ul class="tabs">
+          <li class="tab col s6"><a href="#cocktail" class="active">추천 칵테일</a></li>
+          <li class="tab col s6"><a href="#placeList" class="">지도</a></li>
+          <div class="indicator" style="right: 930.625px; left: 0px;"></div>
+      </ul>
+      <div class="tabs-content carousel initialized">
+        <div id="cocktail" class="col s12">
+          {% include "bar_list.html" %}
+        </div>
+        <div id="placeList" class="col s12 green">Test 3</div>
+      </div>
+  </div>
+</div>
 {% endblock %}
