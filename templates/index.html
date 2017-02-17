@@ -39,22 +39,24 @@
     <script>
         $(document).ready(function () {
             function load_bar(map) {
-                bound = map.getBounds();
-                $.get("/api/bars/", function (data) {
+                var bounds = map.getBounds();
+                var ne = bounds.getNorthEast(); // LatLng of the north-east corner
+                var sw = bounds.getSouthWest(); // LatLng of the south-west corder
+                $.get('/api/bars/', {
+                    'ne': ne.lat() + ',' + ne.lng(),
+                    'sw': sw.lat() + ',' + sw.lng()
+                }, function (data) {
                     data.forEach(function (element, index, array) {
-                        var item_loc = new google.maps.LatLng(element.y, element.x);
-                        var item_marker = new google.maps.Marker({position: item_loc});
+                        var item_loc = new google.maps.LatLng(element.lng, element.lat);
+                        var item_marker = new google.maps.Marker({
+                            position: item_loc,
+                            icon: '/static/images/cocktail-icon.png'
+                        });
                         item_marker.setMap(map);
                     });
-                });
-                var item_loc = new google.maps.LatLng(37.5675451, 126.9773366);
-                var item_marker = new google.maps.Marker({
-                    position: item_loc,
-                    icon: '/static/images/cocktail-icon.png'
-                });
-                item_marker.setMap(map);
-            }
 
+                });
+            }
 
             var mapProp = {
                 center: new google.maps.LatLng(37.5675451, 126.9773356),

@@ -13,7 +13,7 @@ Including another URLconf
     1. Import the include() function: from django.conf.urls import url, include
     2. Add a URL to urlpatterns:  url(r'^blog/', include('blog.urls'))
 """
-from django.conf.urls import url
+from django.conf.urls import url, include
 from django.conf.urls.static import static
 from app.views import (
     BarDetail,
@@ -24,14 +24,21 @@ from app.views import (
     register,
     index,
     select_tags,
+    BarViewSet
 )
 
 from django.contrib import admin
 from cockcoc.settings import MEDIA_ROOT, MEDIA_URL
 
+from rest_framework.routers import DefaultRouter
+
+
+router = DefaultRouter()
+router.register(r'bars', BarViewSet)
 
 urlpatterns = [
     url(r'^$', index),
+    url(r'^api/', include(router.urls)),
     url(r'^admin/', admin.site.urls),
     url(r'^bars/$', BarList.as_view(), name='bar_list'),
     url(r'^bars/(?P<pk>\d+)$', BarDetail.as_view(), name='bar_detail'),

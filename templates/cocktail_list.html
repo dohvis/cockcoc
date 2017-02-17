@@ -1,4 +1,4 @@
 {% for cocktail in object_list %}
     {{ cocktail.name }}
-    <img src="/media/{{ cocktail.image }}">
+    <img src="{{ cocktail.image.url }}">
 {% endfor %}

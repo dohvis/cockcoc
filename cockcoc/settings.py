@@ -38,6 +38,7 @@ INSTALLED_APPS = [
 
     'taggit',
     'location_field',
+    'rest_framework',
 
     'app',
 ]

@@ -6,6 +6,15 @@ from taggit.managers import TaggableManager
 MAX_SIZE = 5242880
 
 
+
+def get_image_path(instance, filename):
+    import os
+    return os.path.join('bars', str(instance.id), filename)
+
+def get_image_path2(instance, filename):
+    import os
+    return os.path.join('cocktails', str(instance.id), filename)
+
 class CockcocImageField(models.ImageField):
     def __init__(self, *args, **kwargs):
         self.content_types = kwargs.pop("content_types", ['image/png', 'image/jpeg'])
@@ -49,7 +58,7 @@ class Cocktail(models.Model):
         content_types=['image/png', 'image/jpeg'],
         max_upload_size=MAX_SIZE,
         null=True,
-        upload_to='cocktail_images',
+        upload_to=get_image_path2,
     )
 
     def recommend(self):
@@ -65,6 +74,12 @@ class Bar(models.Model):
     description = models.TextField(blank=True)
     phone = models.CharField(max_length=32, blank=True)
     lng = models.FloatField()
+    image = CockcocImageField(
+        content_types=['image/png', 'image/jpeg'],
+        max_upload_size=MAX_SIZE,
+        null=True,
+        upload_to=get_image_path,
+    )
     lat = models.FloatField()
     location = PlainLocationField(zoom=16, blank=True)
     image = CockcocImageField(
