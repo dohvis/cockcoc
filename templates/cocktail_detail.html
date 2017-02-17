@@ -4,7 +4,20 @@
 {% endblock %}
 {% block content %}
     <div>
-        <img class="responsive-img" src="/media/{{ cocktail.image }}">
+        <div class="col s12">
+            <div class="card">
+                <div class="card-image"> 
+                    <!--칵테일 이미지 시작-->
+                    <img class="responsive-img" src="/media/{{ cocktail.image }}">
+                    <!--칵테일 이미지 끝-->
+                    <!--칵테일 이름이 들어가면 됩니다-->
+
+                        <span class="card-title cocktailName">예거밤</span>
+                    <!--칵테일 이름이 들어가면 됩니다 끝-->
+                </div>
+            </div>
+        </div>
+        
         <!--술 이미지 넣어주세여 끝-->
         <div class="container">
             <div class="row">
