@@ -1,7 +1,7 @@
 
 {% extends 'base.html' %}
 {% block title %}
-바 이름이 들어갑시다.
+{{ bar.name }}
 {% endblock %}
 {% block content %}
 
@@ -13,7 +13,7 @@
                     <img class="responsive-img" src="/static/images/bar.jpg">
                     <!--바 이미지 끝-->
                     <!--바 이름이 들어가면 됩니다-->
-                    <span class="card-title">국민대 바</span>
+                    <span class="card-title">{{ bar.name }}</span>
                     <!--바 이름이 들어가면 됩니다 끝-->
                 </div>
             </div>
