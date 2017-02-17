@@ -22,6 +22,7 @@ from app.views import (
     CocktailList,
     login,
     register,
+    index,
     select_tags,
 )
 
@@ -30,6 +31,7 @@ from cockcoc.settings import MEDIA_ROOT, MEDIA_URL
 
 
 urlpatterns = [
+    url(r'^$', index),
     url(r'^admin/', admin.site.urls),
     url(r'^bars/$', BarList.as_view(), name='bar_list'),
     url(r'^bars/(?P<pk>\d+)$', BarDetail.as_view(), name='bar_detail'),

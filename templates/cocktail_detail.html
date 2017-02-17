@@ -1,1 +1,48 @@
-{{ cocktail.name }}
+{% extends 'base.html' %}
+{% block title %}
+    {{ cocktail.name }}
+{% endblock %}
+{% block content %}
+    <div>
+        <img class="responsive-img" src="/media/{{ cocktail.image }}">
+        <!--술 이미지 넣어주세여 끝-->
+        <div class="container">
+            <div class="row">
+                <div class="col s12">
+                    <h5 class="header">설명</h5>
+                    <hr>
+                    <p> {{ cocktail.description }}</p>
+                    <h5 class="header">태그</h5>
+                    <hr>
+                    {% for tag in cocktail.tags.all %}
+                        <div class="chip">#{{ tag }}</div>
+                    {% endfor %}
+
+                    <h5 class="header">이건 어때요?</h5>
+                    <hr/>
+                    <div class="slider">
+                        <ul class="slides">
+                            {% for c in cocktail.tags.similar_objects %}
+                                <li>
+                                    <img src="/media/{{ c.image }}"> <!-- random image -->
+                                    <div class="caption center-align">
+                                        <h3>{{ c.name }}</h3>
+                                        <h5 class="light grey-text text-lighten-3">{{ c.description }}</h5>
+                                    </div>
+                                </li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+
+{% block script %}
+    <script>
+        $(document).ready(function () {
+            $('.slider').slider();
+        });
+    </script>
+{% endblock %}
