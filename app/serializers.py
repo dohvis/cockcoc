@@ -7,4 +7,4 @@ from .models import (
 class BarSerializer(serializers.HyperlinkedModelSerializer):
     class Meta:
         model = Bar
-        fields = ('pk', 'name', 'address', 'description', 'phone', 'lat', 'lng', 'url',)
+        fields = ('pk', 'name', 'address', 'description', 'phone', 'lat', 'lng', 'image',)

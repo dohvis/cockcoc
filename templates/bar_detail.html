@@ -10,7 +10,11 @@
             <div class="card">
                 <div class="card-image"> 
                     <!--바 이미지 시작-->
-                    <img class="responsive-img" src="/static/images/bar.jpg">
+                    {% if bar.image %}
+                        <img class="responsive-img" src="{{ bar.image.url }}">
+                    {% else %}
+                        <img class="responsive-img" src="/static/images/bar.jpg">
+                    {% endif %}
                     <!--바 이미지 끝-->
                     <!--바 이름이 들어가면 됩니다-->
                     <span class="card-title">{{ bar.name }}</span>
@@ -35,16 +39,16 @@
                                 <div class="card">
 
                                     <!--칵테일 이미지 시작-->
-                                    <div class="card-image"> <img src="/static/images/sample.jpg"> </div>
+                                    <div class="card-image"> <img src="http://pds12.egloos.com/pds/200906/16/13/a0007213_4a37a24de23dc.jpg"> </div>
                                     <!--칵테일 이미지 끝-->
                                     <div class="card-content">
                                         <!--칵테일 이름 시작-->
-                                        <h5>칵테일 이름 들어가야댐</h5>
+                                        <h5>블루스카이</h5>
                                         <!--칵테일 이름 끝-->
                                         <!--태그 시작-->
-                                        <div class="chip"> 칵테일 </div>
-                                        <div class="chip"> 칵테일 </div>
-                                        <div class="chip"> 칵테일 </div>
+                                        <div class="chip"> #Hard </div>
+                                        <div class="chip"> #예쁨 </div>
+                                        <div class="chip"> #하늘하늘 </div>
                                         <!--태그 끝-->
 
                                     </div>
@@ -54,15 +58,15 @@
                                 <div class="card">
 
                                     <!--칵테일 이미지 시작-->
-                                    <div class="card-image"> <img src="/static/images/sample.jpg"> </div>
+                                    <div class="card-image"> <img src="http://wara-wara.co.kr/upload_file/Menu/GS276_-20121221202331.jpg"> </div>
                                     <!--칵테일 이미지 끝-->
                                     <div class="card-content">
                                         <!--칵테일 이름 시작-->
-                                        <h5>칵테일 이름 들어가야댐</h5>
+                                        <h5>아그와밤</h5>
                                         <!--칵테일 이름 끝-->
                                         <!--태그 시작-->
-                                        <div class="chip"> 칵테일 </div>
-                                        <div class="chip"> 칵테일 </div>
+                                        <div class="chip"> #풀맛 </div>
+                                        <div class="chip"> 예 </div>
                                         <div class="chip"> 칵테일 </div>
                                         <!--태그 끝-->
 
@@ -76,32 +80,31 @@
                             <div class="col s6 m7">
                                 <div class="card">
                                     <!--칵테일 이미지 시작-->
-                                    <div class="card-image"> <img src="/static/images/sample.jpg"> </div>
+                                    <div class="card-image"> <img src="http://cfile29.uf.tistory.com/image/135A2635511A610E254380"> </div>
                                     <!--칵테일 이미지 끝-->
                                     <div class="card-content">
                                         <!--칵테일 이름 시작-->
-                                        <h5>칵테일 이름 들어가야댐</h5>
+                                        <h5>예거밤</h5>
                                         <!--칵테일 이름 끝-->
                                         <!--태그 시작-->
-                                        <div class="chip"> 칵테일 </div>
-                                        <div class="chip"> 칵테일 </div>
-                                        <div class="chip"> 칵테일 </div>
+                                        <div class="chip"> #달달한 </div>
+                                        <div class="chip"> #파 </div>
                                         <!--태그 끝-->                     </div>
                                 </div>
                             </div>
                             <div class="col s6 m7">
                                 <div class="card">
                                     <!--칵테일 이미지 시작-->
-                                    <div class="card-image"> <img src="/static/images/sample.jpg"> </div>
+                                    <div class="card-image"> <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAkGBxMTEhUSExMWFhUXFxgaGBUVFRcVGhgVGhgXFxYXGBcYHSggGBolHRUXITEhJSkrLi4uFx8zODMsNygtLisBCgoKDg0OGxAQGy8lHyUtLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLS0tLf/AABEIARMAtwMBIgACEQEDEQH/xAAcAAABBQEBAQAAAAAAAAAAAAAAAQIDBAUGBwj/xABDEAABAwIEBAMGAggDBwUAAAABAAIRAyEEMUFRBRJhcQaBkRMiMqGx8ELBBxQjUmLR4fEVcpIWFyQzgqKyNERTg8L/xAAZAQADAQEBAAAAAAAAAAAAAAAAAQIDBAX/xAAsEQACAgEDAwMDAwUAAAAAAAAAAQIRAxIhMQQTQSJRoWGR4XGB8AUUIzJS/9oADAMBAAIRAxEAPwDykvU1DG8uiyvbFNNUqHBMak1ujfq8ZkRyhZtbFg6KiahSJRxRjwXKcpcltuJAVpnFiNAslCbgnyJSa4NGtxHmVc1lTJRKpQS4E5N8mlRxvLkrf+NuiICw5RKh4ovkpZJLhmlVxnMmCqFQlHMnoQnJs16OPLclLU4kXCDCxOZJzJPFG7K7kkqNhtcKZldqwuYo5zuh4xKZqcQxANgqIUJcUjSqUaRLlbLdJq1+FcLfVcA1pcTkGgknyCXgPB3VYJFl7Rw3gP8AhLRiy5tQFoa9kcsc0GWOvOWwXNly1sjaGPyzkvAfEKOBxLnYmkbNLR7supunPlOW26z/ABpxfD4vGPrUm8jCALgAuIzcQMifyWb4/wDFIxGIfUa0NmBAM2AgSdSuIfXcdSljxykrY5zUXsdTiOKU6eV0q5J5QtV08fJHel4BIUqCtzIROTSlCAFSKenh5EqJ7YMJWMiKEFJKokVCEJDBLCRKgAhEIQgARCJShABCcwJApaLZSbGkbOC8QVKbYAEK3xLxjia1MU3PdyjIFxIHYK34X8B4nGkhhY0ASXPmOlgJJTx+j3FnEHDAN5gYLpPLGczGULlbwp2zo05ODjHnMlMhdL4h8I4jC1PZ1IJiQWzBHmFz7qZBg5reM4yWzMpQkuSJwQnVEK0ZMYkQUJjApwTUrUDJ2VrKFzpKc1kpkJDGFCCkVEjkJEqQAhCEACEJUDBKEJwCQIAFo8Goh1VgcYHMJPRUmBXcK2bDNZzexrBbpn1D4Io0G0WtpcuQmIkrRwdKj7Z/KWl2sRK+feB8Bx72l1Fz2tGvO5s9BCdwjw/xGtVLaT3tcJJc6q5oHci644OKSjtsbThNty9z039IVHDvqQ5w5gNx6LwfjVNoxDw0yAtPxBwPGUajm1i4uGZ5y7zlYuFYZM5qsMEpOad34Hkk9Cg0UsQL2Qp4zshdakc2iyigolC0MwTmphTmoAe18JsoKRIY1yanOTVQhUISpAIlQlQAJQhASGOTgmrc8N4jE0uZ+H+JwLIDA9z2lpL2gEG0ZqZOkUjHauk8FYdj8VTbUMNm8rBrucXnnEPn3gW8pB6t07KfDE2iZ6LPItUWjSDppn1zwijTbRa1gHLGkKlgGUGOcW8onPJfOeD8R4+mx1OnXrBrrEBxj+nkqbuLYthn2tUH/MVhKN6arYpebb3PXvHDaL6jiHDK/deLvaPa1Iy5ioK+Pqkkmo8znLilwbrHdTiwPHbb5Np5VNKPsNY34u6VOpGJ6oWre4KGxjFIhBXWcAJzUyU5qBjkIQEhjHpE56aEyWKhTsoE/hPoVI3AvifZviYnldE5xMRNjbop1IrSyqhWTg3/ALjv9JTf1Wp+470KNSCmQgJQr+N4NiKJaKlF7C5jXtBbmx3wuHQwVAMJU/cd/pKNSHTI6FNz3NY0EucQ1rRmXEwAO5K9A4JwVpqljuY0sNyseady+u9wbyt/zPJE6Nab2XOeGIovqYioIfSpzRa4EE13+4x99GAuf3a3ddX4W49Qo4Z9M1X0apqhwqsY2pzN5QCOVxj9/b4s9FjkdjOh4rwijXHJXoPbye6wPdUeeQzyGliGNc4E/uPDmnICZXI479HuIANXBPGIZf3LNq2zAHw1bR8J5r3aMl09bx1hzBNUktdP7Wg2XHkcwFpp1RAAc6x3Wg39IWAAPvgPdm5lE8pMGCRMmDHkFEbiFnk3+LVqRLHMhwMEOBaQdQWm4KTE8f5xBYJXpPifxhwnGe7Xpuq8oAbVa32dQbkVBeBPwua4GMhmvKOL4ek2q4UKjqlL8Lnt5HRs4ZSNxYrRRi/A9T8MY/EtKWlVZuqLmpA3VaaERqZqNrN3QspCntI1XUMEShIVqc4qc1MTmoGPWpwfhRrAuA5+U/8ALaQHG2YGZHZZa3/DVH2lLEMseUMqDyPIfk5ZZW1GzWCtiV+E4lh/9K5v/wBRJ9XSZVSr+ssEOZVa2Z/5bm3yzhSitUpmGVHtj917mj5FX8P4qx9Me7i6wjd3N1/FKj1fQdL6mC7F1Lg1HwcwXOExlI1UX606I5zBIMc1pGR73XaUf0lcUH/uGu/z0KB+fIpf96GP/E3DO/zYZn5QrTfsv5+xDS9zkH1xytvvPoEG7WybcxHXJsruD+krEQCcPgjI1w5mdcn7/KEtH9J2IAH/AA2Bzv8A8Men8cqHKft8/gaUfc4lxt8Vgdc7GFWxNW9nfNd+/wDSTiDJ/VcEDo5uHg97uKjb+kHFXIZhmkXc/wDV2kxblH5eizU8l/6/P4NJKNcnMYrHxQpYYW5eZ7yPie5xBhx2Aa0AdDus8Nqz7geezXH6LtP95OPcTyVGMboBRok+Z5FmYzx1xF7odi6kbNDWD/sAWi11wvv+DP03yUsLhMa4BrcNXd19m+/qIWngOBYgn9tg2lsifaM9mY1h9PlcO91iV+NYl5h1epnl7R8fVQ05c6bl2hJkk6XKlxlXhfz9StSvya3iDC4bD1Pcu18+7IfyEHIEOceWCPiIMzYLn6pE+6VoeJQPaMp2AaybAC7nE/QBY5ZCvErimxTdOiw2pblI81HiGgZFROcp8MybyLaLSq3IuyANQrNfGcxyhCdsWxShCdCcKaqxVZGnNClbSThTS1F6GRhdB4IP/Eln/wAlKo2NyBzj/wAFjgBavhisGYvDugR7VoM7OPIfk5Y5XcGvoaQjUkS8Rw8PPdQNw06E9B/NdfxThP7ZzQLjporuC8K16sClTJG+Q9TZcvf2VGyx+5w36qBDXQ0EiSBzQJuesbdFA0A/ETaw8u+S9SpfotxLviLWztc+lh81bwP6KGNe11Z5LQQSJ5ZAvEC9431Vd2lbszcVezPKaGC9o4Bg5jsBNt10HD/B76vujkaf4iRqBFgb3XvGB4dTpN5KLGUwMmtpgXkk5HI9ktDB0+bn9mA4bAA9TAJzWE802ti46V4PPOEeAMNQpv8A1gtqVHNIaDIawltyNzfM7ZLzJuDBqGmLtklxGrRYepXv1SiypXq034dwaGtPtHFwa5zp5mjsOXI6nKFDhuCYSkXMGGoif4G3AEDME/3XPHqXBvVu2XpUjxJmApjIQVTxHCG/ECe1s17Vj/AWGrHnpOdSOcD3mHyJt5Fcrx3wNiKdw0PbObCT6giQt4dV9ROEW9jyx+G5Ce3zKt8Moe820y4en2fktvGcIeSRy+92RwnAD27QRZsTM5CJ/NdPfTgzPtVJHJ+IqvNianQhvYtaGkeoKz5UmIq873P/AHnOd6kn81GuyCqKRzydtsfSibqxUbTixMqoEpQ0JMOS2aEgahMRIGp6dCQNUm3AApwTEoQFkkpWvIuMxcdxcKKUrXpND1H0bw7gvtMQyuWzSqMDrnRwDrDPf1XoNCm1rQGAADIAQuC/RrxxtXh+GBuWUwwznLPc/wDyuzpYkaGO915/TyjBtN7lZU5FtxKz8aZNzYaCyt+0nUKtVo6xJ3WmduUaRnBUyqXa5BWqboIIb5lRClfJW/bOj4B6yubDH/p/BpJ+xBiXA5LM/wANklznm/4fT0WhiGuNyGjsm0xzWErmyx1ZKaLi3FbFCpWNMgBpcNQyJzsQDnqr9GsHgxzDQhzSw+hA9VIcKD8TQe4BR+oUv3I8yB6BXjxTVilOLMLifhmm5rj+K5BP0Xm+M4YaNHGYkg+5Sqcrv4i0tB9XL2OpSZq4xtzH65rzr9M3F6dPhz6DIBqvYy2wdzu+TI81cYetRXmi1N6T5+hCChe4cQJUiVAhEIKEAb8Jvkn1G3TXBcyNxB2TYT4RCAGgApWtGyIStRYHX+DOIvp0zymwdl3H9Cu8wPioiA9eScHx/snEaGPUG31K7qmxr2h2/wByvM6iOmdvyduKpRO6o+I2HVWKXHW6OXmlVjmmxWhwoOcQFzTtK0y1hiz0elxadVcp4qVhYHAENkq63EcugWcOpkuWYyxx8GkXjULOxnGeSwsAlo4ok3yXPeJaVzylVPqL42HjxJypmt/tMyLuuqWJ8WsGRXEvonUqliGbFWrfk1eKC8HUcR8WuNmrzrxdxI1qga4zyZ6+9t5Zeq2KrvZtc/VrSfPT5ri3XuTOp7rq6TGtTl7E53pioryEN2HonMY2btB8lGQinJXoHEbnhzD4c1g6vTaWbRadJGqj4/hsMax9jTAZsBAnoFm0XkK7gWB72g6kCVm4tS1WVe1DGcLpx8AQvRfFnhNuEw7arX8xkAyIz23QoWVselHlkJr6dpShv2U6TGi3MxoFkqUnppe+qQEygYGDcBCJyThmEAR1Ww0kaCV1PAeNtNIMJuLLm3jQhZT6jmEEGLD1Fj9FGTCssaZpjy9uVnqjMU1zVe4XjmtIJK8qo+IHtAGat0vFTtQFxT6GbVHXHqYHvFDjLCB7w9VIcdS/eXhDfFTt47K7R8V/xLil/T8yNIvBLhntX+J0xkQsPxDxenGeS86/2kO5Wbj+PzmfJEOiyOW5X+KG9mzjfEB5oaLKduPDgCuEr8YJyCqv4i86x2XqronXsck+qhfuddxfiPOC0HMiY2F1ktaqXDhafu6ttcdFtHGsapGEsjm7Y4hOptvKbzxolY/yTJH02BWsNAKptdPf0UrHwpYHScX4zUqsaxz3ODYgEkgIWF7fzQoUaG5GfyXPVS06dpNhv/RRgib3Homuq6abbBbEklUAWGm+qja5PAFokpzqRzyB/et2QAw53spadIQSTJyj8yVEwDUj0KWo+QIEDK0/RJgMeYlVOJUpaH6NIaf+ocw8pDl1/hDwvXxriWwykPjrPBIHRg/E6PRQ+O+EUMPiG06D3VKb6TQ9xMzV5ncxnIWDTHdTHNHXoXI3BtWcE8psq/xbhtShUNKo2HC/cHIjdUF2RaatHO009wShyRCYh/Od0xKkSG2CUBAC6PgPhys+KvsKr25hjGOJdB1IHujvmpnNQVscYOTK9EiA0CNY+X5KS8wF0VTws0gllRzKkmDm3/KRtncLmMXSrUX8lWncZEZEbtIzC5YZYZH6WdE8cobyRIAMsiOiVrJ/kqzMUDnI7qdsOEjzMrRpkXZKN904VCLZ9eijLSTb+Sa1+iQyyHW26oUYJSJARB3W2u/bqnhwAsfPrrn0UDgARP8ANSSZEifzGWYVCJA/XpMx1TJJOck+fy0TSCR95RftH5oJjXPz0kX7ooLF0y+91e4PgDXr06AI/aPa3mH4ZNz5C6pMOhi8eXVaPAsf7DEUq0WY9pOUxkRHaVGS9LrkqPKs9T47j20WtweG9ylTAaYtJ76nUncrl8VinMbyzLXEAt3OkA2lWsSeZ5dMguJBF5GYVfEYcObDv7Lx4JLk9TT6aQ7E8VpvdSBAc5oaW8zQQ15b7zQSLZkRl3zWdxDw5RrDm9lySSedjeUSc53RjcExobUHulhHM0OHM5oIh7AfxDP1Ol6J8Q1i99V1QVyZBMub7NrQBYEAUx1IF11xi61Yzmk99M1+5Wp/o8q1Ob2NRr+WCQRBg5bzksh/hSsDHPSPZ4/NSYlx5y537Sfxk80/XdXOH4dlUkOfTpWzcxx/8QYXZryRVt/BzKOOT4KLfCGJdZoaezgtKn+j+qy+IqNpjOBExE35ojMKhQrGm9zZDhlF+UkZG+kErU4dxf2Je8H4rwPcAOp1k9UpTzeH8Bpxmz4c8PUecfq/JUfMAuq0i6crNJE55XXVcR4Vj6bC+qxzWAXPtGw0dmusvPhweri3mq2iYIs50MaR/Dzke1cYiRPWFPwU1GvLAXtp/ul03EgTFiJg7bbrmyYoNNybbN8c52lFJI36ZJhVOPYH2tFwHxtHM09RpOxyV+gFHxTFNp03ONoBN1xxbU1pO2STi0zzjD4gOAIz1nIbKQRP8oBWbg6xDpGua1eYDK+XkDvovbkqZ4ydkX3ZP69OyK7rC+lxsQSL/eqNyJMHbLYzupGPI1Atbb6ITG5x08vln3QgCNrCCANZ21sPWUhaRc22tY6TIT2DMATcW+hm1s9tEwkEC+Vo/loqEO5yRmcvlp99k/2h230GRGQtbM/JNYwG03A1MDYfUZpQ61j9fn5/VAC9tog555eqVlT8O99r/f3dHMYzgyST1Nx89eyDLpBg3FxqRAz1F0hmrwbj3sop1T7v4XbdDP1+z1lKqH3aQQvOajZsTI6zHpmmUq1Wif2bjG32bLmy9LGe8dmdGPqXHaW6PRsVhmvBDhb71VSlhqtHmFGoBzxzh9Fjg6N3BwOp9VzWE8YvFqjZ6/cfRatDxZQPxS35/WFz9nNj2q/k37uLJ5M/F8IeXuc6jQJLSByOrUgHfvZRPQmLplHABrGfsq4qc55iyvSdNO0NaAZBzuQcwulp8bwhgmr5crvyBVhvEsGc3sOWf9Qq/uMiVOL+zJ7MLtS+TmcDgqZq/t6OLc2D/wAtoB5otLiAOWc0+hwR9/cawGYDne1I7cpib7yF0n+JYMCz2D/KCT8mqtX8RYYC1T/tj5mFPfyvZRf2NdGNO2/kno0yBdzrgAweQGI0pwXC2TnOCkaBYAD0AtoudxfjCiPgaT1mfp/NY+M8WVXWaOXz/IX+aI9NlnyiX1GKPDO1xXEGUhL3AR1+pXDeJOPnEHlEhn179FkYjEPeZc4uOmw7BPoYUmC7L+X0zXbh6WOP1PdnJl6mWT0rgXA0STMHpb70B9FdBOUDpJi0Wk2GqAzIAG0mYBls5mM/6JC25troIsROmVtMls3ZglQoGZG/176pKkiDmDcWsfX08kjwQRuJkQQ7/qkfmnOjUXm0GRaQehyCQwa8uNgJ3sBHnb6eaE0wIvf6WtkhKgFL5FzlpIE2t5+Wt+qc1yW6gyOk5HQ6JeYcpEHmkQZERF7fy3PRNjXy8uxvkmIebZRMmYiJBzBFo2jY6JZmTFthbKNYNoJnLvoXCkObldaM5gGQPeEnsYz8ygEARnN7aQJAg5aj+1wY3kJkgdDbtAI6xspAJIJzNvPYj8P9EkEiQMveyOpMRM2t6DokDJg55iRmTExAuc8/nkkANzBOczmQZ00+m/o4tPKSc+ut7n5pKYPQ6aQJtzTPa6kMRlbynX0EhDGisaAIggTE9R5jK2cqu7BiJB8ttBPnf7hXXCYAt3IGe3qfXugsaBneLZ3y6RqfKeku2KkZj8GbkXExPU/2KT9VfsP9Q7XvbzWmGyQAJyGUc2mkdpzTjSMxcuOkgnfyi89tE9bFpRlfqb9R677HbI+iBhHTEAd4HXVa/siIjUgTu7YDXTLcJKmgyIGR/ELagbe9ByIO8I1sNKMtuEJFyBHTQ/YsphgGxMuN72gcsSDnOjtIyurb2tggAzIIsRA9TP3dDKYJETkJBESIveTnMDuOyHNgooYMPAiI1NxtYxtdL+LQ7xIDrzBG2ltlMWNObi2bg/FrHvEG2umnaW+yEAggkmwEztcEQchbO/pNlURcucDW2va+W3p3RyybwB3AIgEQZ7A5RspGOIIN5Gxi0ZZZ26oo0JBBF4MAAkzoOg/mgCF4AAN59B2F79+uSc5gDdTzRfK4ibai5SgWBB1/O3KdfyhOBJmSI1kiRGedwIMWz6wnYiDlgZAzOm33ohWASbAAzFm3JABAkDM+SVFgReyIb8J96wJadD+HrIM+akawSIE6Xk3yn3euQF7a6wupOM/w2N8s/UdcstwlBMZyBJziQTBI13KBDm1JHLuZk3vGQExJtftlq8ssJJBygiL2NiRGTvuyY1kgAkAjQ2MXMye3zHk6m4TN4iHe9GcgaTAta+SBh131y1IHbJAE6zbLb+302TibG5yAHLJ5i2Lm+UX/AJIptO0zNryAMzAytOexOiQxGZiLGcjsYIO2v0UxeC0XyAF+5NrzEKJoJtBJgBsDmkyIAjz37TcS8pDRcnpmLwYEfPySY0RVtDaNLGDfQu6Ge0JvPnAz2FhvHkrIJADwIGhFzMbE/wAPz7BV30wJm2oBbmL5nQ2H90JiDmkACPhOrrmTc7OyjIWCkqQ33RylxNyJMSMoyj5gzImIhLne6JiAeU5WkzF9w5Pp07zYW1IEG1x95X0QAlJw5gXCWjSYmLkTe+nSQoqbo6+Uj+39FP7K5kGG5zYzIBz1k5ZpgpkGYnW8m5EtBjXX62RY6AXsSBaZmPwzAGUmI7wn0zMXkmBncEQBfb70THAZyQRAAj8907S4E9oQCJargJh02jLPQxOVra+WQgqgAiCDuItOoBFnDr1PdWDU90Q0SNRPeL56nz7KAubcAGTlMG3eJm4yQgYhd7sxqNOhj87dyh5Mcl87RkTyyIBAvfPP3h5o4Ozg287jPqBGlkSC6c5gwJsdGgm+w/smIV7r95J5SIAvkdgALz3Q+iRzNcCCDEGG8p/in/qt9mNzrZbRtNpnf11HZDLiA3IbZdo36oEI52VtNokSds769EJabbE5Dtfy0gSJ7tSJgMgbef2eqnYRIEloB92DN5AJnymw0UfPuJ2A1m8ne+iYRpePzQInqAagWGVxNok7HI5xdLUcLg3Mznu24IjOS2/8KSk2eVogcxglxtOUmLgCfrmmTB2jWb/efqgZLSqQCAcwZsT0i2/ZDGkOg52uRAAcJBM6XCjLo5oAjImJi+bSckyiJmBJjKCbb2+7ooCzRpxcxe0Z2HK6dthEzmLayPYNNItrpn5lQ02EAEOiQb5DqC7LLvmArbmAguByFhqfK4tG/qoZSIuX3ZgG8yMwb5+iQCJAv5/OOxStLQbtnL3b3MW5oIznMGyYXAE/LX5mLoGPfSjUOgSC24g2g2BF99+qHtjl3F4I6CM8+2XzU9OnJ3OZnQnrPb1TiLxGnrFyb62UaiqKppE3gk+pkx56pr2QAI65RGh+YP8ARX+RwuMoBcNCJBgjW8WUGJA0jPfKTcRrG8nRCkDRV5T2me3W6e1pJJgWgmwA02TqjGieUyGkwHE+8LZQPzFj0T6dYD4ZAAsAIkxBLpJn7yyV2SOdJz+Z5jMj4fLfZUKrjloPRXqgAED+53VQEiPeEi4JMRAJgHObWG5CIhIY8DORrNiBrAFtY21TXZj8h5ZZHJMLoEHOTIiCMv6pfd94TMC0TBMjcZRPorIFe8bR3A+e6eGkCZyNxIygEa63GXndNZVkXmwgGdYluc2tkme1gCBJnMtE7C97RogBRMTePodvp80qUzkLbjK40MxHbohAhrRaDbWZ0vb1CHukwJicvplqhptByF/7pQ+wtB3I0z8/NMBudhr53/IKYwIHKY1ggknUgxbJNDhEAX5rbQeveE4NLiWgy4SdSTAJOWlkgGsqe6WmoQJB5Lw51x6gb7ptSXS4AwAMzeMh3FlHVaQbxpscxOmead7bmsYsIEADW8xn5pgKKls9clpYaoCOV2vw3y1/NZ5eJ2boLExl2KcyoRB1tEaC4g9VMlZSdGg+id4nMzpl6KL9VIIHLDomNxEzHa6fg8YACHN5pBA6G0Eeh9VYIa8814sI8svksraNKTK+GMTMm1xl6/JWaTzGYgzaJg+f1TXNvOmtzcbHcWTabIKl7jRPSZ06eZtrqs7EAn6QtGqGxyyCbe9cQbyOul+igNIQBbq7Pt2/qiLphLcptpzsrtJwaZmwyJtGUmL6WUX6wG2VJ+JLoBIA7ZarSnIm0iXE1i74ch8shJ/moRZwkiLZQdfmm+175AWO0RITCAYk3OcDID620VpEN2Liqs2bME80GCea40HVQkREHP5Xi+yKrxkBkbHKfz21UY2vneM+3dWkSyfklxaHNsP3jBgXDZGczZROqGzSTAyEZE9FGQf7pXVZi0Rtbz7ooVj6riSS4yTBJLpmRMn1Qis4HIQMra9ZOZQmhFii8jI52PUZ/UJZmZvYnzQhQUOYZ5ib+79IhQVnmSZv6IQmgYvKIJ1t+akxIh8ADS0BCEeQQjjZvdSNsSRmHHr9UISGJSP0WiLNpxrM+qELORpEk0Pn+aixBgCNQPpKEKENkNB53T6zrDuUIVPkS4KtfI9m/PNVq5gtjYHzQhaxM2LTqGH9Rew3BUUyUIVIQ9929g6PX5qDQlCEITDmM9kx+vdIhMTJXfA3ufySoQgZ/9k="> </div>
                                     <!--칵테일 이미지 끝-->
                                     <div class="card-content">
                                         <!--칵테일 이름 시작-->
-                                        <h5>칵테일 이름 들어가야댐</h5>
+                                        <h5>깔루아밀크</h5>
                                         <!--칵테일 이름 끝-->
                                         <!--태그 시작-->
-                                        <div class="chip"> 칵테일 </div>
-                                        <div class="chip"> 칵테일 </div>
-                                        <div class="chip"> 칵테일 </div>
+                                        <div class="chip"> #달달한 </div>
+                                        <div class="chip"> #커피 </div>
+                                        <div class="chip"> #Soft </div>
                                         <!--태그 끝-->
 
                                     </div>

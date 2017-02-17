@@ -31,6 +31,10 @@ class BarDetail(DetailView):
     model = Bar
     template_name = 'bar_detail.html'
 
+    def get_context_data(self, **kwargs):
+        context = super(BarDetail, self).get_context_data(**kwargs)
+        context['cocktails'] = Cocktail.objects.all()[:5]
+        return context
 
 def login(request):
     return render(request, template_name='login.html')

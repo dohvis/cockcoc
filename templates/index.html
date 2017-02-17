@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% block title %}
-    로그인
+    칵테일을 콕!
 {% endblock %}
 {% block content %}
     <div class="row">
@@ -14,6 +14,8 @@
             <div class="tabs-content initialized">
                 <div id="mapview" style="height: 500px;">
                     <div id="map" style="width: 100%;height: 500px"></div>
+                    <div class="row col s12" id="barList">
+                    </div>
                 </div>
                 <div id="cocktail" class="col s12">
                     {% for cocktail in cocktails %}
@@ -37,6 +39,18 @@
 
 {% block script %}
     <script>
+        function addList(data) {
+            $("#barList").html('');
+            var output = '';
+            $.each(data, function (index, value) {
+                //add each value to the output buffer (we also have access to the other properties of this object: id, start, and end)
+                console.info(value);
+                output += '<div><h3>'+value.name+'</h3><li>' + value.phone + '</li><a href="/bars/'+value.pk+'"><img class="responsive-img" src="'
+                    +value.image+
+                    '" /></a></div>';
+            });
+            $("#barList").append(output)
+        }
         $(document).ready(function () {
             function load_bar(map) {
                 var bounds = map.getBounds();
@@ -53,8 +67,9 @@
                             icon: '/static/images/cocktail-icon.png'
                         });
                         item_marker.setMap(map);
-                    });
 
+                    });
+                    addList(data);
                 });
             }
 
