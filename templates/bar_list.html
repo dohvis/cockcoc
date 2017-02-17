@@ -1,4 +1,48 @@
-{% for bar in object_list %}
-    {{ bar.name }}
-    {{ bar.phone }}
-{% endfor %}
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDncsvHHB7lSi_J0YrQ5PnBWNSa7XBiBXA"></script>
+</head>
+<body>
+<div class="container">
+  <div class="row" style="height: 45%">
+    <div id="map" style="width: 100%;height: 100%"></div>
+  </div>
+  <div class="row" style="height: 55%">
+    <ul>
+      {% for bar in object_list %}
+        <li>
+          <!-- <img src="{{ bar.url }}"> -->
+          <span class="title">{{ bar.name }}</span>
+          <span>{{ bar.phone }}</span>
+      </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>
+
+<script>
+  $(document).ready(function() {
+          function load_bar(map){
+                  bound = map.getBounds();
+                  $.get( "./data.json?lat...lng...", function( data ) {
+                          data.forEach( function(element, index, array){
+                                  var item_loc = new google.maps.LatLng( element.y, element.x );
+                                  var item_marker = new google.maps.Marker({position:item_loc});
+                                  item_marker.setMap( map );
+                          });
+                  });
+          }
+          var mapProp= {
+                  center:new google.maps.LatLng(37.5675451, 126.9773356),
+                  zoom:14
+          };
+          var map = new google.maps.Map( document.getElementById('map'), mapProp);
+
+          google.maps.event.addDomListener(window, 'load', function(){load_bar(map)});
+          map.addListener('center_changed', function(){load_bar(map)});
+          map.addListener('zoom_changed', function(){load_bar(map)});
+  });
+</script>
+</body>
+<html>

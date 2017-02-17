@@ -6,6 +6,8 @@ from cockcoc.settings import BASE_DIR
 from app.models import Cocktail
 
 from django.core.files import File
+
+
 class Command(BaseCommand):
     help = 'Load fixture data'
 
@@ -14,11 +16,10 @@ class Command(BaseCommand):
         from requests import get
         response = get(url)
         name = name.replace(" ", "_")
-        filepath = os.path.join(BASE_DIR, 'media', 'cocktail_images', '%s.jpg' % name)
+        filepath = os.path.join('static/images', 'cocktail_images', '%s.jpg' % name)
         with open(filepath, 'wb') as fp:
             fp.write(response.content)
-        # 혼자쓸꺼니까 봐줘염
-        return filepath.replace("/Users/nero/github/personal/cockcoc/", "")
+        return filepath
 
     def add_arguments(self, parser):
         parser.add_argument('filepath', nargs='+', type=str)
@@ -31,12 +32,23 @@ class Command(BaseCommand):
                 description = cocktail['explanation']
                 tags = cocktail['tag'].split(",")
                 url = cocktail['img']
-                image = self._get_image(url, name)
-                print(image)
-                cocktail_obj, created = Cocktail.objects.get_or_create(
-                    name=name,
-                    description=description,
-                    image=File(open(image, 'rb'))
-                )
+                fn = 'static/images/cocktail_images/%s.jpg' % name.replace(" ", "_")
+
+                try:
+                    cocktail_obj = Cocktail.objects.get(name=name)
+                    fp = File(open(fn, 'rb'))
+                    cocktail_obj.image = fp
+                    cocktail_obj.save()
+                except Cocktail.DoesNotExist:
+                    fn = self._get_image(url, name)
+                    print(fn)
+                    fp = open(fn, 'rb')
+                    cocktail_obj = Cocktail.objects.create(
+                        name=name,
+                        description=description,
+                    )
+                    cocktail_obj.image = File(fp)
+                    cocktail_obj.save()
+
                 [cocktail_obj.tags.add(x) for x in tags]
                 cocktail_obj.save()
