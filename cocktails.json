@@ -1,0 +1,194 @@
+[
+  {
+    "name": "럼콕",
+    "explanation": "럼과 콜라를 섞는 칵테일로 가장 기본적인 롱 드링크이다. 콜라맛이 많이 난다.",
+    "tag": "롱,럼,콜라,달다,톡쏘는",
+    "img": "http://cfile21.uf.tistory.com/image/124697234BEAADA071B4C1"
+  },
+  {
+    "name": "데낄라 슬램",
+    "explanation": "스트레이트 글라스에 데킬라와 탄산수를 채워 테이블에 내리친후 단번에 마시는 칵테일. 탄산이 끌어넘쳐 테이블을 망쳐놓을 수 도 있다.",
+    "tag": "숏,데낄라,톡쏘는,높은도수",
+    "img": "https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQJKEOfJSXX_qsP2dXwp6O4Zlhs3XD_aCmDWfeA4-wjMMGcW92KXA"
+  },
+  {
+    "name": "진 토닉",
+    "explanation": "진과 토닉워터를 섞어서 만드는 칵테일. ",
+    "tag": "롱,진,레몬,토닉워터,쓰다,높은도수",
+    "img": "http://thumbnail.egloos.net/600x0/http://pds12.egloos.com/pds/200902/28/40/e0059340_49a8a1911346e.jpg"
+  },
+  {
+    "name": "보드카토닉",
+    "explanation": "보드카에 토닉워터를 섞어 마시는 칵테일. 인생의 쓴맛을 알 수 있다.",
+    "tag": "롱,보드카,토닉워터,라임,높은도수,쓰다",
+    "img": "http://assets.absolutdrinks.com/drinks/solid-background-black/soft-shadow/floor-reflection/415x655/vodka-tonic(85).jpg"
+  },
+  {
+    "name": "보드카 크랜베리",
+    "explanation": "보드카에 크랜베리주스를 섞어 마시는 칵테일. 인생의 쓴맛을 알 수 있다.",
+    "tag": "롱,보드카,토닉워터,크랜배리,높은도수,쓰다",
+    "img": "http://assets.absolutdrinks.com/drinks/solid-background-black/soft-shadow/floor-reflection/415x655/vodka-cranberry(85).jpg"
+  },
+  {
+    "name": "스크류 드라이버",
+    "explanation": "무진장 심플한 오렌지 주스맛 음료. 방심하고 마시다간 높은 도수에 골로간다.",
+    "tag": "롱,보드카,높은도수,오렌지주스,,달다",
+    "img": "http://cdn.barmano.com/recipe-images/screwdriver-cocktail-52-big.jpg"
+  },
+  {
+    "name": "블랙러시안",
+    "explanation": "커피 리큐어은 깔루아를 섞어 만드는 보드카 기반의 칵테일. 깔루아 비율에 따라 단맛이 정해진다. 1:1로 하면 매우 단맛이 남으로 주의",
+    "tag": "숏,보드카,깔루아,단맛,",
+    "img": "http://www.doopedia.co.kr/_upload/image/1306/12/130612018423248/130612018423248_thumb_400.jpg"
+  },
+  {
+    "name": "화이트러시안",
+    "explanation": "블랙러시아에 우유를 넣은 칵테일",
+    "tag": "숏,보드카,깔루아,단맛,우유",
+    "img": "https://image-proxy.namuwikiusercontent.com/r/http%3A%2F%2Flistcrux.com%2Fwp-content%2Fuploads%2F2013%2F12%2FWhite-Russian.jpg"
+  },
+  {
+    "name": "싱가폴 슬링",
+    "explanation": "싱가포르에서 시작된 칵테일. 진과 체리 브랜디 리큐어를 기본으로 달콤한 맛을 낸다. 또 다양한 과일로 향을 내서 화려하고 맛있는 음료",
+    "tag": "롱,진,체리,레몬,톡쏘는,화려한색상,낮은도수,",
+    "img": "https://scontent-amt2-1.cdninstagram.com/t51.2885-15/s640x640/sh0.08/e35/15057150_2143862995839111_5218182241535918080_n.jpg?ig_cache_key=MTM5NDk1MzcwMjQ0Nzk4NDgwMg%3D%3D.2"
+  },
+  {
+    "name": "데낄라 선라이즈",
+    "explanation": "데낄라를 베이스로 하는 칵테일로 오렌지 주스와 그레나딘 시럽이 들어가 맛있다. 석양이 지는 모습을 닮아 선라이즈 칵테일이라고 한다.",
+    "tag": "롱,데낄라,오렌지,달다,화려한색상,낮은도수",
+    "img": "http://pds23.egloos.com/pds/201203/04/03/d0144003_4f537b4dc6b5f.jpg"
+  },
+  {
+    "name": "깔루아 밀크",
+    "explanation": "우유와 커피 리큐어인 깔루아를 섞어만든 음료. 술에 익숙하지 않은 사람들이 부드러운맛에 좋아한다.",
+    "tag": "숏,우유,깔루아,단맛,높은도수,커피",
+    "img": "http://fimg2.pann.com/new/download.jsp?FileID=24210875"
+  },
+  {
+    "name": "보드카 에너지",
+    "explanation": "보드카와 에너지 드링크를 섞어 술에 취한듯 안취한듯 오래 놀 수 있는 에너지를 내게 해준다.(사실 취한 상태다.)",
+    "tag": "롱,보드카,에너지드링크,높은도수,달다",
+    "img": "http://cfile235.uf.daum.net/image/146E0A4E50C12FD41B78A3"
+  },
+  {
+    "name": "피치크러쉬",
+    "explanation": "복숭아 맛이 나는 달달한 음료.",
+    "tag": "롱,복숭아,단맛,낮은도수",
+    "img": "http://cfile225.uf.daum.net/image/2515B341537C70371D9427"
+  },
+  {
+    "name": "준벅",
+    "explanation": "6월의 푸르름을 표현한 칵테일. 향과 맛이 달콤한 말리부가 들어가서 인기가 많다.",
+    "tag": "롱,코코넛,파인애플,바나나,단맛,",
+    "img": "http://mblogthumb3.phinf.naver.net/20140302_166/dyngzzang36_1393766462756xdQMW_JPEG/DSC05061.JPG?type=w2"
+  },
+  {
+    "name": "미도리 사워",
+    "explanation": "멜론 맛인 미도리와 레몬향이 어우러져서 상큼한 색깔과 맛을 연출하는 것이 포인트.",
+    "tag": "롱,미도리,레몬,라임,멜론,낮은도수",
+    "img": "https://www.thecocktailproject.com/sites/default/files/Midori_Sour_Thumb.jpg"
+  },
+  {
+    "name": "블루 사파이어",
+    "explanation": "낮은 도수와 청량감 그리고 달콤함이 어우러진 칵테일이다. 파란 빛깔이 인상적이다.",
+    "tag": "코코넛.,럼,달다,화려한색상,새콤",
+    "img": "http://cfile21.uf.tistory.com/image/237986495243A5CB0EF388"
+  },
+  {
+    "name": "롱 아일랜드 아이스티",
+    "explanation": "레몬맛이 강한 아이스티와 비슷하고 콜라의 단맛이 알콜맛을 적당이 감쳐주어 마시기 쉽다.",
+    "tag": "롱,진,보드카,럼,양이많은,높은도수",
+    "img": "https://image-proxy.namuwikiusercontent.com/r/http%3A%2F%2Fwww.bevdig.com%2Fuploads%2F2%2F6%2F7%2F4%2F26740497%2F1547008_orig.jpg"
+  },
+  {
+    "name": "롱 비치 아이스티",
+    "explanation": "롱 아일랜드 아이스티가 변형된 칵테일이다.",
+    "tag": "보드카,진,럼,새콤",
+    "img": "http://pds23.egloos.com/pds/201203/05/29/d0139729_4f54ce89adc34.jpg"
+  },
+  {
+    "name": "바하바 마마",
+    "explanation": "열대과일들이 많이 들어가 단맛과 과일향이 많이 나는 칵테일이다.",
+    "tag": "롱,럼,오렌지,파인애플,레몬,코코넛,석류",
+    "img": "https://reviews-photos-drinkedin.s3.amazonaws.com/thumbnail/300x300s/3f/a8/8f/bahama-mama-recipe-21-1376832742.jpg"
+  },
+  {
+    "name": "블루마티니",
+    "explanation": "파란색 마티니 칵테일이다. 쓰다.",
+    "tag": "숏,보드카,블루베리,쓰다",
+    "img": "http://images.freeimages.com/images/previews/a9b/blue-martini-2-1573680.jpg"
+  },
+  {
+    "name": "상그리아",
+    "explanation": "스페인어의 피 라는 단어에서 유래된 와인 베이스의 붉은색 음료다. 여름에 잘어울린다.",
+    "tag": "사과,레드와인,달다",
+    "img": "http://cfile208.uf.daum.net/image/125B9B4A4E9C9687185AE6"
+  },
+  {
+    "name": "도화",
+    "explanation": "복숭아 꽃이라는 이름의 칵테일 답게 복숭아 리큐르를 베이스로 깔은 음료이다. 달콤한 재료만으로 만든 마시기 쉬운 맛이다.",
+    "tag": "롱,복숭아,레몬,라임,사과,달다",
+    "img": "http://cfile23.uf.tistory.com/image/167F1D364FC6DC981D7098"
+  },
+  {
+    "name": "모히토",
+    "explanation": "럼 피즈에 민트를 첨가해 산뜻한 맛을 냄. 시각적으로도 청량감을 줌.",
+    "tag": "럼,라임,민트,달다",
+    "img": "https://reviews-photos-drinkedin.s3.amazonaws.com/thumbnail/300x300s/b9/a9/e7/cuban-mojito-68-1363608940.jpg"
+  },
+  {
+    "name": "피나콜라다",
+    "explanation": "트로피칼 음료로 럼주를 첨가하고 코코넛, 파인애플 주스를 넣어 알콜의 맛과 단맛이 어우러짐",
+    "tag": "파인애플,럼,코코넛,달다",
+    "img": "https://image-proxy.namuwikiusercontent.com/r/http%3A%2F%2Fwww.recipessquared.com%2Fwp-content%2Fuploads%2F2014%2F04%2FPina-Colada.jpg"
+  },
+  {
+    "name": "초코콜라다",
+    "explanation": "코코넛의 느끼한 맛, 파인애플 주스의 새콤달콤한, 마무리는 살짝 쌉싸래한 초콜릿",
+    "tag": "양이많은,럼,초콜릿,코코넛,달다",
+    "img": "https://reviews-photos-drinkedin.s3.amazonaws.com/thumbnail/300x300s/fb/25/8b/choco-colada-95-1371362603.jpg"
+  },
+  {
+    "name": "블루하와이",
+    "explanation": "시원함과 입에서 느껴지는 새콤달콤한 맛이 더욱 돋보이는 칵테일",
+    "tag": "양이많은,럼.,파인애플,달다",
+    "img": "http://thumbnail.egloos.net/600x0/http://pds11.egloos.com/pds/200902/28/40/e0059340_49a8a63446d56.jpg"
+  },
+  {
+    "name": "레몬드랍",
+    "explanation": "잔 끝에 설탕을 적시고 마시는 칵테일이다. 이름답게 레몬이 들어간다.",
+    "tag": "숏,보드카,레몬,달다",
+    "img": "http://cfile233.uf.daum.net/image/013B834850B3162506365A"
+  },
+  {
+    "name": "베일리스 밀크",
+    "explanation": "달콤하고 부드러우나 아이리쉬 위스키 특유의 약간 쓴맛이 있음",
+    "tag": "베일리스,우유,초코,달다",
+    "img": "https://image-proxy.namuwikiusercontent.com/r/https%3A%2F%2Fs-media-cache-ak0.pinimg.com%2F236x%2F42%2Fe8%2F8e%2F42e88e63d8c2d4da6a730a4d788a48b4.jpg"
+  },
+  {
+    "name": "화이트 레이디",
+    "explanation": "레몬주스가 들어가기때문에 상큼함",
+    "tag": "진,레몬주스,큐라소,쓰다",
+    "img": "http://postfiles16.naver.net/20160102_287/dredrm_1451688275900fo3iN_JPEG/33.jpg?type=w1"
+  },
+  {
+    "name": "갓 파더",
+    "explanation": "아몬드 향과 위스키의 강한 맛을 담고있음",
+    "tag": "위스키,아마렛토,높은도수",
+    "img": "http://www.stepbystep.com/wp-content/uploads/2012/05/Godfather-Cocktail.jpg"
+  },
+  {
+    "name": "아이리쉬 커피",
+    "explanation": "따뜻한 커피 칵테일",
+    "tag": "위스키,커피",
+    "img": "http://postfiles16.naver.net/20160102_143/dredrm_1451686335913em9u3_JPEG/12.jpg?type=w1"
+  },
+  {
+    "name": "맨하탄",
+    "explanation": "마마티니와 같이 칵테일의 여왕이라 불리는 칵테일이다. 위스키를 베이스를 쓰고 와인 리큐르를 쓴다.",
+    "tag": "숏,위스키,체리",
+    "img": "http://postfiles13.naver.net/20160102_220/dredrm_1451686573209UKg1h_JPEG/14.jpg?type=w1"
+  }
+]
