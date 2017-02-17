@@ -52,6 +52,9 @@ class Cocktail(models.Model):
         upload_to='cocktail_images',
     )
 
+    def recommend(self):
+        return self.tags.similar_objects()[:5]
+
     def __str__(self):
         return "<Cocktail: {}>".format(self.name)
 

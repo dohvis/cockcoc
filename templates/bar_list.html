@@ -25,7 +25,7 @@
   $(document).ready(function() {
           function load_bar(map){
                   bound = map.getBounds();
-                  $.get( "./data.json?lat...lng...", function( data ) {
+                  $.get( "/api/bars/", function( data ) {
                           data.forEach( function(element, index, array){
                                   var item_loc = new google.maps.LatLng( element.y, element.x );
                                   var item_marker = new google.maps.Marker({position:item_loc});

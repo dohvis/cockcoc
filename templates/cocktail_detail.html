@@ -12,7 +12,7 @@
                     <!--칵테일 이미지 끝-->
                     <!--칵테일 이름이 들어가면 됩니다-->
 
-                        <span class="card-title cocktailName">{{ cocktail.name }}</span>
+                        <span class="card-title cocktailName">{{ cockt }}</span>
                     <!--칵테일 이름이 들어가면 됩니다 끝-->
                 </div>
             </div>
@@ -35,7 +35,7 @@
                     <hr/>
                     <div class="slider">
                         <ul class="slides">
-                            {% for c in cocktail.tags.similar_objects %}
+                            {% for c in cocktail.recommend %}
                                 <li>
                                     <img src="/media/{{ c.image }}"> <!-- random image -->
                                     <div class="caption center-align">

@@ -42,4 +42,6 @@ def select_tags(request):
 
 
 def index(request):
-    return render(request, template_name='index.html')
+    cocktails = Cocktail.objects.all()
+    context = {'cocktails': cocktails}
+    return render(request, template_name='index.html', context=context)
