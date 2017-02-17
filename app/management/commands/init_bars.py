@@ -21,12 +21,16 @@ class Command(BaseCommand):
                 phone = bar['telDisplay']
                 x = bar['x']
                 y = bar['y']
-
-                bar_objects = Bar.objects.create(
-                    name=name,
-                    address=address,
-                    phone=phone,
-                    lat=x,
-                    lng=y,
-                    image=File(open('static/bar_images/%s.jpg' % name.replace(" ", "_")))
-                )
+                fn = 'static/images/bar_images/%s.jpg' % name.replace(" ", "_")
+                try:
+                    print(name)
+                    bar_objects = Bar.objects.create(
+                        name=name,
+                        address=address,
+                        phone=phone,
+                        lat=x,
+                        lng=y,
+                        image=File(open(fn, 'rb'))
+                    )
+                except FileNotFoundError:
+                    pass

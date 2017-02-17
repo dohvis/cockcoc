@@ -64,6 +64,12 @@ class Bar(models.Model):
     lng = models.FloatField()
     lat = models.FloatField()
     location = PlainLocationField(zoom=16, blank=True)
+    image = CockcocImageField(
+        content_types=['image/png', 'image/jpeg'],
+        max_upload_size=MAX_SIZE,
+        null=True,
+        upload_to='bar_images',
+    )
     cocktails = models.ManyToManyField(Cocktail, related_name='bars')
 
     def __str__(self):
